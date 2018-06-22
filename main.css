@@ -1,0 +1,17 @@
+.header {
+  text-align: center;
+}
+
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+#reset {
+  background-image: linear-gradient(coral, red, darkred);
+  border: 1px solid black;
+  border-radius: 5px;
+  font-weight: bold;
+}
+#reset:hover {
+  opacity: 0.7;
+}
