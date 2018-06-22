@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+
+  <form action=#>
+    <h1>Sign Up</h1>
+    <label for='email'>Email:</label><br />
+    <input id='email' type='email' placeholder='email' required><br />
+    <label for='username'>Username:</label><br />
+    <input id='username' type='text' placeholder='username' required><br />
+    <label for='password'>Password:</label><br />
+    <input id='password' type='password' placeholder='password' required><br />
+    <label for='age'>Age:</label><br />
+    <select name='age'></select>
+    <input type='submit'>
+  </form>
+  
+  <form>
+    <p>Male or Female?</p>
+    <input name='gender' id='female' type='radio' value='female'>
+    <label for='female'>Female</label>
+    <input name='gender' id='male' type='radio' value='male'>
+    <label for='male'>Male</label>
+    <button>Submit</button>
+  </form>
+  
+  <form>
+    <p>What's your current mood?</p>
+    <select name='mood'>
+      <option value='happy'>:)</option>
+      <option value='neutral'>:|</option>
+      <option value='sad'>:(</option>
+    </select> <br />
+    <textarea rows=5 cols=30></textarea>
+  </form>
+  
+  <form>
+    <p>Choose your selection</p>
+    <input type='checkbox'>
+    <input type='checkbox'>
+    <input type='checkbox'>
+    <input type='checkbox'>
+    <input type='checkbox'>
+  </form>
+
+
+  
+<script src="main.js"></script>  
+</body>
+</html>
