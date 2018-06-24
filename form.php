@@ -21,12 +21,12 @@
   <form action="action.php" method="post" class="form">
     <fieldset>
       <legend>Personal Information</legend>
-      <label for='username'>Username:</label><br />
-      <input name='username' id="username" type='text' placeholder='username' maxlength="22" required autofocus><br />
-      <label for='password'>Password:</label><br />
-      <input name='password' id="password" type='password' placeholder='password' maxlength="16" required><br />
-      <label for='email'>Email:</label><br />
-      <input name='email' id="email" type='email' placeholder='email' required><br />
+      <label for="username"><span class="required">*</span>Username:</label><br />
+      <input name="username" id="username" type="text" placeholder="username" maxlength="22" required autofocus><br />
+      <label for="password"><span class="required">*</span>Password:</label><br />
+      <input name="password" id="password" type="password" placeholder="password" maxlength="16" required><br />
+      <label for="email"><span class="required">*</span>Email:</label><br />
+      <input name="email" id="email" type="email" placeholder="email" required><br />
       <label for="phone">Phone Number:</label><br />
       <input type="tel" placeholder="phone number"><br />
       <label for="bday">Birthday:</label><br />
@@ -35,7 +35,7 @@
       <input type="number" name="day" min="1" max="31" placeholder="1">
       <input type="number" name="month" min="1" max="12" placeholder="1">
       <input type="number" name="year" min="1900" max="2018" placeholder="2000"><br />
-      <label for='phpbirthday'>PHP Date of Birth:</label><br />
+      <label for="phpbirthday">PHP Date of Birth:</label><br />
       <select name="phpday" id="phpday">
         <?php
           for ($i = 1; $i <= 31; $i++) {
@@ -68,12 +68,12 @@
 
     <fieldset>
       <legend>Gender</legend>
-      <input name='gender' id='female' type='radio' value='female'>
-      <label for='female'>Female</label>
-      <input name='gender' id='male' type='radio' value='male'>
-      <label for='male'>Male</label>
-      <input name='gender' id='other' type='radio' value='other'>
-      <label for='other'>Other</label>
+      <input name="gender" id="female" type="radio" value="female">
+      <label for="female">Female</label>
+      <input name="gender" id="male" type="radio" value="male">
+      <label for="male">Male</label>
+      <input name="gender" id="other" type="radio" value="other">
+      <label for="other">Other</label>
     </fieldset>
 
     <fieldset>
@@ -91,10 +91,10 @@
 
     <fieldset>
       <legend>Feedback</legend>
-      <select name='mood'>
-        <option value='happy'>:)</option>
-        <option value='neutral'>:|</option>
-        <option value='sad'>:(</option>
+      <select name="mood">
+        <option value="happy">:)</option>
+        <option value="neutral">:|</option>
+        <option value="sad">:(</option>
       </select> <br />
       <textarea name="message" rows=6 cols=50>Let us know what you think.</textarea><br />
       <label for="recommend">How likely are you to recommend us?</label><br />
@@ -103,11 +103,11 @@
 
     <fieldset>
       <legend>Interests</legend>
-      <input type='checkbox' checked>
-      <input type='checkbox'>
-      <input type='checkbox'>
-      <input type='checkbox'>
-      <input type='checkbox'><br />
+      <input type="checkbox" checked>
+      <input type="checkbox">
+      <input type="checkbox">
+      <input type="checkbox">
+      <input type="checkbox"><br />
       <label for="color">Favorite Color:</label><br />
       <input type="color" name="color">
     </fieldset>
@@ -133,7 +133,7 @@
       </select>
     </fieldset>
 
-    <input type='submit' value="Apply">
+    <input type="submit" id="submit" value="APPLY">
     <input type="reset" id="reset" value="RESET">
   </form>
 
