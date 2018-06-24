@@ -6,12 +6,31 @@
   max-width: 500px;
   margin: 0 auto;
 }
-#reset {
-  background-image: linear-gradient(coral, red, darkred);
+
+.required {
+  color: red;
+}
+
+
+
+
+/* BUTTONS */
+
+#submit, #reset {
   border: 1px solid black;
   border-radius: 5px;
   font-weight: bold;
+  font-size: 20px;
+  padding: 10px 0px;
+  width: 40%;
 }
-#reset:hover {
+#submit {
+  background-image: linear-gradient(lightskyblue, skyblue, blue);
+  margin-left: 10%;
+}
+#reset {
+  background-image: linear-gradient(coral, red, darkred);
+}
+#submit:hover, #reset:hover {
   opacity: 0.7;
 }
