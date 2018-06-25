@@ -1,3 +1,8 @@
+<?php
+  $errors = [];
+  $missing = [];
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,23 +14,38 @@
 </head>
 <body>
 
-<div class="header">
-  <h1>Sign Up</h1>
-  <label for="search">Not what you're looking for? Search the website:</label>
-  <input type="search" name="search">
-  <input type="submit" name="searchbutton" value="Search">
-  <hr>
-</div>
+  <div class="header">
+    <h1>Sign Up</h1>
+    <label for="search">Not what you're looking for? Search the website:</label>
+    <input type="search" name="search">
+    <input type="submit" name="searchbutton" value="Search">
+    <hr>
+  </div>
 
+<?php if ($errors || $missing) : ?>
+  <p class="warning">Please fix the item(s) indicated in red below</p>
+<?php endif; ?>
 
   <form action="action.php" method="post" class="form">
     <fieldset>
       <legend>Personal Information</legend>
-      <label for="username"><span class="required">*</span>Username:</label><br />
+      <label for="username"><span class="required">*</span>Username:
+        <?php if ($missing && in_array('username', $missing)) : ?>
+          <span class="warning">Please enter your username.</span>
+        <?php endif; ?>
+      </label><br />
       <input name="username" id="username" type="text" placeholder="username" maxlength="22" required autofocus><br />
-      <label for="password"><span class="required">*</span>Password:</label><br />
+      <label for="password"><span class="required">*</span>Password:
+        <?php if ($missing && in_array('password', $missing)) : ?>
+          <span class="warning">Please enter your password.</span>
+        <?php endif; ?>      
+      </label><br />
       <input name="password" id="password" type="password" placeholder="password" maxlength="16" required><br />
-      <label for="email"><span class="required">*</span>Email:</label><br />
+      <label for="email"><span class="required">*</span>Email:
+        <?php if ($missing && in_array('email', $missing)) : ?>
+          <span class="warning">Please enter your email address.</span>
+        <?php endif; ?>      
+      </label><br />
       <input name="email" id="email" type="email" placeholder="email" required><br />
       <label for="phone">Phone Number:</label><br />
       <input type="tel" placeholder="phone number"><br />

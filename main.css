@@ -7,10 +7,13 @@
   margin: 0 auto;
 }
 
-.required {
+.required, .warning {
   color: red;
 }
 
+.warning {
+  font-weight: bold;
+}
 
 
 

@@ -19,6 +19,7 @@
   echo "<p>Your free trial membership will last until ";
   echo "<p>Your username is ".htmlspecialchars($username).".</p>";
   echo "<p>A verification email was sent to ".htmlspecialchars($email).".</p>";
+  print_r ($_POST);
 
   $outputstring = $date."\t Username: ".$username."\t Email: ".$email."\n";
   $fp = fopen("info.txt", 'ab');
